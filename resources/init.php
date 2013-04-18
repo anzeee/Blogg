@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+
+include_once('config.php');
+
+mysql_connect(DB_HOST, DB_USER, DB_PASS);
+mysql_select_db(DB_DATABASE);
+
+include_once('func/blog.php');
+
+
+?>
