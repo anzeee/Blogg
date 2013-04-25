@@ -1,13 +1,9 @@
 <?php
-
-define('DB_USER', 'root');                               // <-- mysql db user
-
-define('DB_PASS', '');        // <-- mysql db password
-
-define('DB_DATABASE', 'blog');                    // <-- mysql db name
-
-define('DB_NAME', 'localhost:8080');                    // <-- mysql server host
-
-      
-            
+$config['db_host'] = 'localhost';
+$config['db_user'] = 'root';
+$config['db_pass'] = '';
+$config['db_name'] = 'blog';
+foreach ($config as $k => $v) {
+define(strtoupper($k), $v);
+}
 ?>

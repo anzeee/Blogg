@@ -1,7 +1,16 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+include_once('resources/init.php');
+
+
+if ( ! isset($_GET['id']) )  {
+    header('Location: index.php');
+    die();
+}//end if
+
+delete('categories', $_GET['id']);
+
+
+header('Location: category_list.php');
+die();
 ?>
